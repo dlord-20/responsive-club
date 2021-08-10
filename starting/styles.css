@@ -7,7 +7,7 @@ html {
 
 body {
     display: grid;
-    grid-template: 50px repeat(49, 1fr) / repeat(12, 1fr);
+    grid-template: 3rem repeat(49, 1fr) / repeat(12, 1fr);
     max-width: 1920px;
     margin: auto;
 }
@@ -94,7 +94,7 @@ header {
 /* Cover Section */
 
 .cover {
-    grid-area: 2 / 1 / 18 / 13;
+    grid-area: 2 / 1 / 8 / 13;
     background-image: url("resources/paxson-woelber-ntrKD8wJEg0-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,7 +135,8 @@ header {
 
 /* Why Section */
 .why {
-    grid-area: 19 / 2 / 22 / 12;
+    grid-area: 8 / 2 / 10 / 12;
+    padding-top: 4rem;
 }
 
 .why .reasons {
@@ -169,9 +170,41 @@ header {
 
 }
 
+/* Quotes Divider */
+
+.quotes {
+    grid-area: 10 / 1 / 13 / 13;
+    background-image: url("resources/tim-foster-dxmCzpnKQQ0-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 30rem;
+}
+
+.quotes div {
+    font-size: 2.8rem;
+    padding-top: 12rem;
+    color: whitesmoke;
+    text-shadow: 1px 1px 5px black;
+}
+.quotes div .speaker {
+    padding-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .quotes {
+        grid-area: 8 / 1 / 11 / 13;
+    }
+
+    .quotes div {
+        padding: 12rem 1rem 0 1rem;
+        font-size: 2rem;
+    }
+
+}
 
 /* Focus Selector */
-.quotes,
 .image-separator,
 .right,
 footer {
