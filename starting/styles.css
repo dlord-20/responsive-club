@@ -2,23 +2,41 @@
 
 html {
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     display: grid;
     grid-template: repeat(50, 1fr) / repeat(12, 1fr);
-    max-width: 1280px;
+    max-width: 1920px;
     margin: auto;
 }
 
 body * {
-    border: blue 1px solid;
+    /* border: blue 1px solid; */
+}
+
+h1 {
+    font-size: 2.24rem;
+    color: whitesmoke;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+
+}
+
+p {
+
 }
 
 /* Header */
 header {
     grid-column: 1 / 13;
-    grid-row: 1 / 3;    
+    grid-row: 1 / 2;    
 }
 
 .header {
@@ -34,7 +52,7 @@ header {
     width: 22.5%;
 }
 
-.nav {
+.nav-desk {
     width: 50%;
     padding-right: 2rem;
 }
@@ -48,4 +66,72 @@ header {
 
 .header ul li {
     align-self: center;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .nav-desk {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+        width: 60%;
+    }
+
+    .logo p {
+        display: none;
+    }
+}
+
+/* Cover Section */
+
+.cover {
+    grid-area: 2 / 1 / 18 / 13;
+    background-image: url("resources/paxson-woelber-ntrKD8wJEg0-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template: repeat(3, 33%) / repeat(12, 1fr);
+}
+
+.cover .scroll {
+    grid-area: 2 / 3 / 3 / 8;
+}
+.cover p {
+    color: whitesmoke;
+    padding: 1rem 0;
+    font-weight: 200;
+}
+
+.cover button {
+    font-family: 'Poppins', sans-serif;
+    padding: .5rem 1.5rem;
+    background-color: transparent;
+    border: rgba(245, 245, 245, 0.973) 2px solid;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.cover button:hover {
+    background-color: rgb(245, 245, 245, 0.25);
+}
+
+/* Why Section */
+
+
+
+
+/* Focus Selector */
+.why,
+.quotes,
+.image-separator,
+.right,
+footer {
+    display: none;
 }
