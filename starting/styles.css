@@ -136,7 +136,7 @@ header {
 /* Why Section */
 .why {
     grid-area: 8 / 2 / 10 / 12;
-    padding-top: 4rem;
+    padding: 4rem 0;
 }
 
 .why .reasons {
@@ -156,12 +156,14 @@ header {
 @media only screen and (max-width: 600px) {
 
     .why {
-        grid-area: 5 / 2 / 8 / 12;
+        grid-area: 5 / 2 / 7 / 12;
         padding: 2rem 0;
+        text-align: center;
     }
 
     .why .reasons {
         flex-direction: column;
+        padding: 2rem 0 0 0;        
     }
 
     .why .reasons div {
@@ -178,7 +180,6 @@ header {
     background-size: cover;
     background-position: center;
     text-align: center;
-    height: 30rem;
 }
 
 .quotes div {
@@ -194,7 +195,7 @@ header {
 @media only screen and (max-width: 600px) {
 
     .quotes {
-        grid-area: 8 / 1 / 11 / 13;
+        grid-area: 7 / 1 / 9 / 13;
     }
 
     .quotes div {
@@ -204,9 +205,61 @@ header {
 
 }
 
-/* Focus Selector */
-.image-separator,
-.right,
-footer {
-    display: none;
+/* right section */
+.right {
+    grid-area: 13 / 2 / 16 / 12;
+}
+
+.right .subheading {
+    padding: 4rem 0 2rem 0;
+}
+
+.right .column2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right .column2 div {
+    max-width: 48%;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .right {
+        grid-area: 9 / 2 / 13 / 12;
+    }
+
+    .right .column2 {
+        flex-direction: column;
+    }
+
+    .right .column2 div {
+        max-width: 100%;
+        padding-bottom: 1rem;
+    }
+
+}
+
+/* Footer */
+
+.footer {
+    grid-area: 16 / 1 / 17 / 13;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    background-color: rgb(247, 247, 247);
+}
+
+.footer .social {
+    display: flex;
+    width: 12%;
+    min-width: 1rem;
+    justify-content: space-between;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        grid-area: 12 / 1 / 13 / 13;
+    }
 }
